@@ -1,0 +1,16 @@
+## Shape input card
+imax 1 number of channels
+jmax * number of background
+kmax * number of nuisance parameters
+----------------------------------------------------------------------------------------------------
+bin         ZTomm_mpmet_Zpeak
+observation 85
+shapes  *           * shapes/histos_ZTomm_mpmet_Zpeak.root     histo_$PROCESS histo_$PROCESS_$SYSTEMATIC
+shapes  data_obs           * shapes/histos_ZTomm_mpmet_Zpeak.root     histo_Data
+bin                                                                             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             ZTomm_mpmet_Zpeak             
+process                                                                         WZTo2L2Q                      Wg_MADGRAPHMLM                WH_hww                        ggH_hww                       H_htt                         ZH_hww                        ggWW                          Vg                            VVV                           top                           Fake                          WW                            DY                            WZgS                          VZ                            
+process                                                                         0                             -1                            -2                            -3                            -4                            -5                            1                             2                             3                             4                             5                             6                             7                             8                             9                             
+rate                                                                            0.0559                        0.0000                        0.0000                        0.0000                        0.2842                        0.6017                        0.0217                        6.9463                        1.1918                        4.9982                        4.1983                        0.0217                        0.6095                        0.7394                        0.2434                        
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+

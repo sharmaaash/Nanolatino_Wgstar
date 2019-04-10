@@ -1,0 +1,16 @@
+## Shape input card
+imax 1 number of channels
+jmax * number of background
+kmax * number of nuisance parameters
+----------------------------------------------------------------------------------------------------
+bin         ZTomm_mpmet
+observation 16152
+shapes  *           * shapes/histos_ZTomm_mpmet.root     histo_$PROCESS histo_$PROCESS_$SYSTEMATIC
+shapes  data_obs           * shapes/histos_ZTomm_mpmet.root     histo_Data
+bin                                                                             ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   ZTomm_mpmet                   
+process                                                                         WZTo2L2Q                      Wg_MADGRAPHMLM                WH_hww                        ggH_hww                       H_htt                         ZH_hww                        ggWW                          Vg                            VVV                           top                           Fake                          WW                            DY                            WZgS                          VZ                            
+process                                                                         0                             -1                            -2                            -3                            -4                            -5                            1                             2                             3                             4                             5                             6                             7                             8                             9                             
+rate                                                                            7.2919                        508.9538                      16.3123                       1.0952                        9.8067                        11.6679                       1.6960                        1489.7322                     53.6560                       4279.6754                     1463.7969                     21.3473                       249.1525                      560.3992                      25.6051                       
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
