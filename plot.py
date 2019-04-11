@@ -66,6 +66,14 @@ groupPlot['Fake']  = {
                   'samples'  : ['Fake']
 }
 
+plot['ggZH_hww'] = {
+                  'nameHR' : 'ggZH',
+                  'color': 632+4, # kRed+4
+                  'isSignal' : 1,
+                  'isData'   : 0,    
+                  'scale'    : 1    #
+}
+
 groupPlot['Vg']  = {  
                   'nameHR' : "V#gamma",
                   'isSignal' : 0,
@@ -116,13 +124,13 @@ plot['Fake']  = {
               }
 
 
-plot['WZTo2L2Q'] = {
-                  'nameHR' : 'Hww',
-                  'color': 632, # kRed 
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                  'scale'    : 1    #
-                  }
+#plot['WZTo2L2Q'] = {
+#                  'nameHR' : 'Hww',
+#                  'color': 632, # kRed 
+#                  'isSignal' : 1,
+#                  'isData'   : 0,
+#                  'scale'    : 1    #
+#                  }
 
 plot['top'] = {   
                   'nameHR' : 'tW and t#bar{t}',
@@ -198,13 +206,13 @@ plot['WW']  = {
                   'scale'    : 1.0   # ele/mu trigger efficiency   datadriven
 }
 
-plot['Wg_MADGRAPHMLM'] = {
-                  'nameHR' : 'Hww',
-                  'color': 632, # kRed 
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                  'scale'    : 1    #
-                  }
+#plot['Wg_MADGRAPHMLM'] = {
+#                  'nameHR' : 'Hww',
+#                  'color': 632, # kRed 
+#                  'isSignal' : 1,
+#                  'isData'   : 0,
+#                  'scale'    : 1    #
+#                  }
 
 # data
 
