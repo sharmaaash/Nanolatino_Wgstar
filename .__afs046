@@ -297,6 +297,14 @@ samples['WH_hww']  = {  'name'   :   getSampleFiles(directory,'HWplusJ_HToWW_M12
                         'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
 }
 
+############ ttH ############
+samples['H_htt'] = {  'name'   :   getSampleFiles(directory,'GluGluHToTauTau_M125',True,'nanoLatino_')
+                                 + getSampleFiles(directory,'VBFHToTauTau_M125',True,'nanoLatino_')
+                                 + getSampleFiles(directory,'HZJ_HToTauTau_M125',True,'nanoLatino_')
+                                 + getSampleFiles(directory,'HWplusJ_HToTauTau_M125',True,'nanoLatino_')
+                                 + getSampleFiles(directory,'HWminusJ_HToTauTau_M125',True,'nanoLatino_'),
+                      'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
+}
 
 ############ VBF H->WW ############
 samples['qqH_hww']  = {  'name'   :   getSampleFiles(directory,'VBFHToWWTo2L2NuPowheg_M125_PrivateNano',True,'nanoLatino_'),
@@ -326,36 +334,6 @@ samples['ttH_hww']  = {  'name'   :   getSampleFiles(directory,'ttHToNonbb_M125'
                          'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
                      }
 
-############ H->TauTau ############
-
-splitHtt=False
-if not splitHtt:
-
-  samples['H_htt'] = {  'name'   :   getSampleFiles(directory,'GluGluHToTauTau_M125',True,'nanoLatino_')
-                                   + getSampleFiles(directory,'VBFHToTauTau_M125',True,'nanoLatino_')
-                                   + getSampleFiles(directory,'HZJ_HToTauTau_M125',True,'nanoLatino_')
-                                   + getSampleFiles(directory,'HWplusJ_HToTauTau_M125',True,'nanoLatino_')
-                                   + getSampleFiles(directory,'HWminusJ_HToTauTau_M125',True,'nanoLatino_'),
-                         'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
-                     }
-else:
-  
-  samples['ggH_htt']  = {  'name'   : getSampleFiles(directory,'GluGluHToTauTau_M125',True,'nanoLatino_'),
-                           'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
-                        } 
-
-  samples['qqH_htt']  = {  'name'   : getSampleFiles(directory,'VBFHToTauTau_M125',True,'nanoLatino_'),
-                           'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
-                        }
-
-  samples['ZH_htt']  = {  'name'   : getSampleFiles(directory,'HZJ_HToTauTau_M125',True,'nanoLatino_'),
-                           'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
-                        }
-
-  samples['WH_htt']  = {  'name'   :  getSampleFiles(directory,'HWplusJ_HToTauTau_M125',True,'nanoLatino_')
-                                    + getSampleFiles(directory,'HWminusJ_HToTauTau_M125',True,'nanoLatino_'),
-                           'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
-}
 
 ###########################################
 ################## FAKE ###################
