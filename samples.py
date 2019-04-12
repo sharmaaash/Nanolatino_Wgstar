@@ -47,7 +47,7 @@ elif 'sdfarm' in SITE : # KISTI T3
 
 
 
-directory = treeBaseDir+'Fall2017_nAOD_v1_Full2017v2/MCl1loose2017v2__MCCorr2017__btagPerEvent__l2loose__l2tightOR2017/'
+directory = treeBaseDir+'Fall2017_nAOD_v1_Full2017v2/MCl1loose2017v2__MCCorr2017__btagPerEvent__l2loose__l2tightOR2017'+skim
 
 
 ################################################
@@ -196,8 +196,8 @@ addSampleWeight(samples,'DY','DYJetsToLL_M-50-LO',ptllDYW_NLO)
 
 if useDYtt :
 
-  samples['DY'] = {    'name'   :   getSampleFiles(directory,'DYJetsToTT_MuEle_M-50',True,'nanoLatino_')
-                                  + getSampleFiles(directory,'DYJetsToLL_M-10to50-LO',True,'nanoLatino_'),
+  samples['DY'] = {    'name'   :   getSampleFiles(directory,'DYJetsToTT_MuEle_M-50',False,'nanoLatino_')
+                                  + getSampleFiles(directory,'DYJetsToLL_M-10to50-LO',False,'nanoLatino_'),
                        'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
                        'FilesPerJob' : 5 ,
                        }
@@ -207,8 +207,8 @@ if useDYtt :
 
 else:
 
-  samples['DY'] = {    'name'   :   getSampleFiles(directory,'DYJetsToLL_M-50',True,'nanoLatino_')
-                                  + getSampleFiles(directory,'DYJetsToLL_M-10to50-LO',True,'nanoLatino_'),
+  samples['DY'] = {    'name'   :   getSampleFiles(directory,'DYJetsToLL_M-50',False,'nanoLatino_')
+                                  + getSampleFiles(directory,'DYJetsToLL_M-10to50-LO',False,'nanoLatino_'),
                        'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
                        'FilesPerJob' : 5 ,
                        }

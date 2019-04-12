@@ -103,12 +103,12 @@ groupPlot['Higgs']  = {
 		  'samples'  : ['H_htt', 'H_hww', 'ZH_hww', 'ggZH_hww', 'WH_hww', 'qqH_hww', 'ggH_hww']
 }
 
-plot['Higgs']  = {
-                  'color': 632, # kRed
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                  'scale'    : 1.0
-}
+#plot['Higgs']  = {
+#                  'color': 632, # kRed
+#                  'isSignal' : 1,
+#                  'isData'   : 0,
+#                  'scale'    : 1.0
+#}
 
 #plot['WZgS']  = { 'color'    : 600,   # kViolet + 1
 #                  'isSignal' : 0,
