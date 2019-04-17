@@ -2,8 +2,11 @@
 
 #cuts = {}
   
-supercut = 'Lepton_pt[0]>25 && Lepton_pt[1]>8 && Lepton_pt[2]>8  \
-          '
+supercut = 'Lepton_pt[0]>25 && Lepton_pt[1]>8 && Lepton_pt[2]>8 && Lepton_isWgs[0]>0.5 \
+           '
+
+## Alt$(Lepton_isWgs[0],0)>0.5 && Alt$(Lepton_isWgs[1],0)>0.5 && Alt$(Lepton_isWgs[2],0)>0.5  \
+          
 
 
 #
