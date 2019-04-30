@@ -2,7 +2,7 @@
 
 #cuts = {}
   
-supercut = 'Lepton_pt[0]>25 && Lepton_pt[1]>8 && Lepton_pt[2]>8 && Lepton_isWgs[0]>0.5 \
+supercut = 'Lepton_pt[0]>25 && Lepton_pt[1]>8 && Lepton_pt[2]>8 \
            '
 
 ## Alt$(Lepton_isWgs[0],0)>0.5 && Alt$(Lepton_isWgs[1],0)>0.5 && Alt$(Lepton_isWgs[2],0)>0.5  \
@@ -27,7 +27,7 @@ cuts['ZTomm_mpmet']  = '  mpmet > 25  \
 
 
 cuts['ZTomm_mpmet_Zpeak']  = '  mpmet > 25  \
-                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*13*13) || (fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*13*11)) && fabs( mllWgSt - 91.2) < 10. '
+                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*13*13) || (fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*13*11)) && fabs( mllWgSt - 91.2) < 10 '
 
 cuts['ZTomm_mpmet_WgSt']  = '  mpmet > 25  \
                           && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*13*13) || (fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*13*11)) && fabs( mllWgSt - 3.1) > 0.1 && mllWgSt < 4. && mllWgSt >0.'
