@@ -62,10 +62,10 @@ Nlep='3'
 ############ BASIC MC WEIGHTS ##################
 ################################################
 
-XSWeight      = 'XSWeight'
-SFweight      = 'puWeight*TriggerEffWeight_3l*EMTFbug_veto*Lepton_RecoSF[0]*Lepton_RecoSF[1]*Lepton_RecoSF[2]'
-#SFweight      = 'SFweight'+Nlep+'l'
-GenLepMatch   = 'GenLepMatch'+Nlep+'l'
+#XSWeight      = 'XSWeight'
+#SFweight      = 'puWeight*TriggerEffWeight_3l*EMTFbug_veto*Lepton_RecoSF[0]*Lepton_RecoSF[1]*Lepton_RecoSF[2]*Lepton_tightElectron_'+eleWP+'_IdIsoSF'+'[0]'
+##SFweight      = 'SFweight'+Nlep+'l'
+#GenLepMatch   = 'GenLepMatch'+Nlep+'l'
 
 ################################################
 ############### B-Tag  WP ######################
@@ -136,13 +136,20 @@ eleWP='mvaFall17Iso_WP90'
 
 muWP='cut_Tight_HWWW'
 #... Build formula
-
-LepWPCut        = '1'
+LepWPCut     = 'LepCut'+Nlep+'l__ele_'+eleWP+'__mu_'+muWP
+#LepWPCut        = '1'
 #LepWPweight     = 'LepSF2l__ele_'+eleWP+'__mu_'+muWP
 LepWPweight     = 'LepSF'+Nlep+'l__ele_'+eleWP+'__mu_'+muWP
 #LepWPweight     = '1'
 
 #SFweight += '*'+LepWPweight+'*'+LepWPCut
+
+XSWeight      = 'XSWeight'
+SFweight      = 'puWeight*TriggerEffWeight_3l*EMTFbug_veto*Lepton_RecoSF[0]*Lepton_RecoSF[1]*Lepton_RecoSF[2]*(Lepton_tightMuon_'+muWP+'_IdIsoSF'+'[2]) '
+#(Lepton_tightMuon_'+muWP+'_IdIsoSF'+'[2] || Lepton_tightElectron_'+eleWP+'_IdIsoSF'+'[2])
+#*Lepton_isTightMuon_cut_Tight_HWWW[0]*Lepton_isTightMuon_cut_Tight_HWWW[1]*Lepton_tightElectron_'+eleWP+'_IdIsoSF'+'[2]'
+#SFweight      = 'SFweight'+Nlep+'l'
+GenLepMatch   = 'GenLepMatch'+Nlep+'l'
 
 #... And the fakeW
 
@@ -223,7 +230,7 @@ if useDYtt :
                        'FilesPerJob' : 5 ,
                        }
 
-  addSampleWeight(samples,'DY','DYJetsToTT_MuEle_M-50',ptllDYW_NLO)
+ # addSampleWeight(samples,'DY','DYJetsToTT_MuEle_M-50',ptllDYW_NLO)
   addSampleWeight(samples,'DY','DYJetsToLL_M-10to50-LO',ptllDYW_LO)
 
 else:
@@ -254,19 +261,15 @@ samples['top'] = {    'name'   :   getSampleFiles(directory,'TTTo2L2Nu',False,'n
 addSampleWeight(samples,'top','TTTo2L2Nu',Top_pTrw)
 
 ############ WW ############
-samples['WW'] = {    'name'   :   getSampleFiles(directory,'WWTo2L2Nu',False,'nanoLatino_')
-                                + getSampleFiles(directory,'GluGluToWWToENEN',False,'nanoLatino_')
-                                + getSampleFiles(directory,'GluGluToWWToMNMN',False,'nanoLatino_')
-                                + getSampleFiles(directory,'GluGluToWWToENMN',False,'nanoLatino_')
-                                + getSampleFiles(directory,'GluGluToWWToMNEN',False,'nanoLatino_')
-                                + getSampleFiles(directory,'GluGluToWWToTNEN',False,'nanoLatino_')
-                                + getSampleFiles(directory,'GluGluToWWToENTN',False,'nanoLatino_')
-                                + getSampleFiles(directory,'GluGluToWWToMNTN',False,'nanoLatino_')
-                                + getSampleFiles(directory,'GluGluToWWToTNMN',False,'nanoLatino_')
-                                + getSampleFiles(directory,'GluGluToWWToTNTN',False,'nanoLatino_'),
+#samples['WW'] = {    'name'   :   getSampleFiles(directory,'WWTo2L2Nu_PrivateNano',False,'nanoLatino_')
+#                     'weight' :   XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC+'*nllW' ,
+#                     'FilesPerJob' : 4 ,                    
+#                     }
+
+#FIXME Add nllW weight to WW
+samples['WW'] = {    'name'   :   getSampleFiles(directory,'WWTo2L2Nu',False,'nanoLatino_') ,
                      'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC+'*nllW' ,
-                     'FilesPerJob' : 4 ,                    
-                     }
+}
 
 samples['WWewk'] = {   'name'  : getSampleFiles(directory, 'WpWmJJ_EWK',False,'nanoLatino_'),
                        'weight': XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC + '*(Sum$(abs(GenPart_pdgId)==6)==0)' #filter tops
@@ -294,6 +297,7 @@ addSampleWeight(samples,'VgS','WZTo3LNu_mllmin01', '(Gen_ZGstar_mass>=0.1 || Gen
 
 samples['VZ'] = {    'name'   : getSampleFiles(directory,'ZZTo2L2Nu',False,'nanoLatino_')
                      + getSampleFiles(directory,'WZTo2L2Q',False,'nanoLatino_')
+                     + getSampleFiles(directory,'ZZTo4L',False,'nanoLatino_')
                      + getSampleFiles(directory,'ZZTo2L2Q',False,'nanoLatino_'),
                      'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
                      'FilesPerJob' : 20 ,

@@ -2,9 +2,15 @@
 
 #cuts = {}
   
-supercut = 'Lepton_pt[0]>25 && Lepton_pt[1]>8 && Lepton_pt[2]>8 \
-           '
+supercut = 'Lepton_pt[0]>25 && Lepton_pt[1]>8 && Lepton_pt[2]>8 && ((Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && (Lepton_isTightMuon_cut_Tight_HWWW[1]>0.5)) '
 
+
+#((Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5 || Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && (Lepton_isTightElectron_mvaFall17Iso_WP90[1]>0.5 || Lepton_isTightMuon_cut_Tight_HWWW[1]>0.5)) 
+#(Lepton_isTightElectron_mvaFall17Iso_WP90[1]>0.5 || 
+
+# Lepton_isTightElectron_'+eleWP+'_IdIsoSF'+'[0] = 1 && Lepton_isTightMuon_cut_Tight_HWWW[1]>0.5 || Lepton_isTightElectron_'+eleWP+' && Lepton_isTightMuon_cut_Tight_HWWW[2]>0.5\
+           
+##Lepton_isTightElectron_mvaFall17Iso_WP90_IdIsoSF[0] &&
 ## Alt$(Lepton_isWgs[0],0)>0.5 && Alt$(Lepton_isWgs[1],0)>0.5 && Alt$(Lepton_isWgs[2],0)>0.5  \
           
 
