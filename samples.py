@@ -60,37 +60,6 @@ Nlep='3'
 
 ################################################
 ############ BASIC MC WEIGHTS ##################
-################################################
-
-#XSWeight      = 'XSWeight'
-#SFweight      = 'puWeight*TriggerEffWeight_3l*EMTFbug_veto*Lepton_RecoSF[0]*Lepton_RecoSF[1]*Lepton_RecoSF[2]*Lepton_tightElectron_'+eleWP+'_IdIsoSF'+'[0]'
-##SFweight      = 'SFweight'+Nlep+'l'
-#GenLepMatch   = 'GenLepMatch'+Nlep+'l'
-
-################################################
-############### B-Tag  WP ######################
-################################################
-
-#bAlgo = 'DeepB'
-#btagSF = 'btagWeight'
-#bWP = '0.1522'
-
-#bVeto = '( Alt$(CleanJet_pt[0],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[0]],0)<'+bWP+' )\
-#      && ( Alt$(CleanJet_pt[1],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[1]],0)<'+bWP+' )\
-#      && ( Alt$(CleanJet_pt[2],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[2]],0)<'+bWP+' )\
-#      && ( Alt$(CleanJet_pt[3],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[3]],0)<'+bWP+' )\
-#      && ( Alt$(CleanJet_pt[4],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[4]],0)<'+bWP+' )\
-#      && ( Alt$(CleanJet_pt[5],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[5]],0)<'+bWP+' )\
-#      && ( Alt$(CleanJet_pt[6],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[6]],0)<'+bWP+' )\
-#      && ( Alt$(CleanJet_pt[7],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[7]],0)<'+bWP+' )\
-#      && ( Alt$(CleanJet_pt[8],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[8]],0)<'+bWP+' )\
-#      && ( Alt$(CleanJet_pt[9],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[9]],0)<'+bWP+' )\
-#      && ( Alt$(CleanJet_pt[10],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[10]],0)<'+bWP+' )\
-#      '
-
-#SFweight += '*'+btagSF
-
-#bAlgo='cmvav2'
 #bAlgo='csvv2ivf'
 #bAlgo='DeepCSVB'
 
@@ -136,20 +105,46 @@ eleWP='mvaFall17Iso_WP90'
 
 muWP='cut_Tight_HWWW'
 #... Build formula
-#LepWPCut     = 'LepCut'+Nlep+'l__ele_'+eleWP+'__mu_'+muWP
-LepWPCut        = '1'
+
+LepWPCut        = 'LepCut'+Nlep+'l__ele_'+eleWP+'__mu_'+muWP
 #LepWPweight     = 'LepSF2l__ele_'+eleWP+'__mu_'+muWP
 LepWPweight     = 'LepSF'+Nlep+'l__ele_'+eleWP+'__mu_'+muWP
 #LepWPweight     = '1'
 
 #SFweight += '*'+LepWPweight+'*'+LepWPCut
 
+
+################################################
+############ BASIC MC WEIGHTS ##################
+################################################
+
 XSWeight      = 'XSWeight'
-SFweight      = 'puWeight*TriggerEffWeight_3l*EMTFbug_veto*Lepton_RecoSF[0]*Lepton_RecoSF[1]*(Lepton_RecoSF[2]*Lepton_tightElectron_'+eleWP+'_IdIsoSF'+'[0])*(Lepton_tightMuon_'+muWP+'_IdIsoSF'+'[1])*(Lepton_tightMuon_'+muWP+'_IdIsoSF'+'[2])'
-#(Lepton_tightMuon_'+muWP+'_IdIsoSF'+'[2] || Lepton_tightElectron_'+eleWP+'_IdIsoSF'+'[2])
-#*Lepton_isTightMuon_cut_Tight_HWWW[0]*Lepton_isTightMuon_cut_Tight_HWWW[1]*Lepton_tightElectron_'+eleWP+'_IdIsoSF'+'[2]'
-#SFweight      = 'SFweight'+Nlep+'l'
+SFweight      = 'puWeight*TriggerEffWeight_3l*EMTFbug_veto*Lepton_RecoSF[0]*Lepton_RecoSF[1]*Lepton_RecoSF[2]*(Lepton_tightMuon_'+muWP+'_IdIsoSF'+'[2])'
+#SFweight      = 'SFweight'+Nlep+'l
 GenLepMatch   = 'GenLepMatch'+Nlep+'l'
+
+################################################
+############### B-Tag  WP ######################
+################################################
+#bAlgo = 'DeepB'
+#btagSF = 'btagWeight'
+#bWP = '0.1522'
+
+#bVeto = '( Alt$(CleanJet_pt[0],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[0]],0)<'+bWP+' )\
+#      && ( Alt$(CleanJet_pt[1],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[1]],0)<'+bWP+' )\
+#      && ( Alt$(CleanJet_pt[2],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[2]],0)<'+bWP+' )\
+#      && ( Alt$(CleanJet_pt[3],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[3]],0)<'+bWP+' )\
+#      && ( Alt$(CleanJet_pt[4],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[4]],0)<'+bWP+' )\
+#      && ( Alt$(CleanJet_pt[5],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[5]],0)<'+bWP+' )\
+#      && ( Alt$(CleanJet_pt[6],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[6]],0)<'+bWP+' )\
+#      && ( Alt$(CleanJet_pt[7],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[7]],0)<'+bWP+' )\
+#      && ( Alt$(CleanJet_pt[8],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[8]],0)<'+bWP+' )\
+#      && ( Alt$(CleanJet_pt[9],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[9]],0)<'+bWP+' )\
+#      && ( Alt$(CleanJet_pt[10],0)<20 || Alt$(Jet_btag'+bAlgo+'[CleanJet_jetIdx[10]],0)<'+bWP+' )\
+#      '
+
+#SFweight += '*'+btagSF
+
 
 #... And the fakeW
 
@@ -206,8 +201,6 @@ useDYtt = False
 #mixDYttandHT = False  # be carefull DY HT is LO (HT better stat for HT>450 GEV)
 
 ### These weights were evaluated on ICHEP16 MC -> Update ?
-#ptllDYW_NLO = '1.08683 * (0.95 - 0.0657370*TMath::Erf((gen_ptll-12.5151)/5.51582))'
-#ptllDYW_LO  = '(8.61313e-01+gen_ptll*4.46807e-03-1.52324e-05*gen_ptll*gen_ptll)*(1.08683 * (0.95 - 0.0657370*TMath::Erf((gen_ptll-11.)/5.51582)))*(gen_ptll<140)+1.141996*(gen_ptll>=140)'
 
 ptllDYW_NLO = '((0.623108 + 0.0722934*gen_ptll - 0.00364918*gen_ptll*gen_ptll + 6.97227e-05*gen_ptll*gen_ptll*gen_ptll - 4.52903e-07*gen_ptll*gen_ptll*gen_ptll*gen_ptll)*(gen_ptll<45)*(gen_ptll>0) + 1*(gen_ptll>=45))'
 ptllDYW_LO = '((0.632927+0.0456956*gen_ptll-0.00154485*gen_ptll*gen_ptll+2.64397e-05*gen_ptll*gen_ptll*gen_ptll-2.19374e-07*gen_ptll*gen_ptll*gen_ptll*gen_ptll+6.99751e-10*gen_ptll*gen_ptll*gen_ptll*gen_ptll*gen_ptll)*(gen_ptll>0)*(gen_ptll<100)+(1.41713-0.00165342*gen_ptll)*(gen_ptll>=100)*(gen_ptll<300)+1*(gen_ptll>=300))'
@@ -230,7 +223,7 @@ if useDYtt :
                        'FilesPerJob' : 5 ,
                        }
 
- # addSampleWeight(samples,'DY','DYJetsToTT_MuEle_M-50',ptllDYW_NLO)
+  addSampleWeight(samples,'DY','DYJetsToTT_MuEle_M-50',ptllDYW_NLO)
   addSampleWeight(samples,'DY','DYJetsToLL_M-10to50-LO',ptllDYW_LO)
 
 else:
@@ -244,10 +237,6 @@ else:
   addSampleWeight(samples,'DY','DYJetsToLL_M-50',ptllDYW_NLO)
   addSampleWeight(samples,'DY','DYJetsToLL_M-10to50-LO',ptllDYW_LO)
 
-###################### Top ###############################################
-
-Top_pTrw = '(TMath::Sqrt( TMath::Exp(0.0615-0.0005*topGenPt) * TMath::Exp(0.0615-0.0005*antitopGenPt) ) )'
-
 samples['top'] = {    'name'   :   getSampleFiles(directory,'TTTo2L2Nu',False,'nanoLatino_')
                                  + getSampleFiles(directory,'ST_tW_antitop',False,'nanoLatino_')
                                  + getSampleFiles(directory,'ST_tW_top',False,'nanoLatino_')
@@ -258,15 +247,9 @@ samples['top'] = {    'name'   :   getSampleFiles(directory,'TTTo2L2Nu',False,'n
                      'FilesPerJob' : 2 ,
 }
 
-addSampleWeight(samples,'top','TTTo2L2Nu',Top_pTrw)
-
 ############ WW ############
-#samples['WW'] = {    'name'   :   getSampleFiles(directory,'WWTo2L2Nu_PrivateNano',False,'nanoLatino_')
-#                     'weight' :   XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC+'*nllW' ,
-#                     'FilesPerJob' : 4 ,                    
-#                     }
 
-#FIXME Add nllW weight to WW
+
 samples['WW'] = {    'name'   :   getSampleFiles(directory,'WWTo2L2Nu',False,'nanoLatino_') ,
                      'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC+'*nllW' ,
 }
@@ -277,11 +260,11 @@ samples['WWewk'] = {   'name'  : getSampleFiles(directory, 'WpWmJJ_EWK',False,'n
 
 samples['Vg'] = {    'name'   : getSampleFiles(directory,'Wg_MADGRAPHMLM',False,'nanoLatino_') 
                               + getSampleFiles(directory,'Zg',False,'nanoLatino_'),
-                    # 'weight' : 'puWeight*genWeight/abs(genWeight)*(!(Gen_ZGstar_mass > 0 && Gen_ZGstar_MomId == 22 ))',
-                    # 'weights': [ ],
-                     'weight' : XSWeight+'*'+SFweight+'*'+METFilter_MC+'*(!(Gen_ZGstar_mass > 0 && Gen_ZGstar_MomId == 22 ))',
-                     'FilesPerJob': 20 ,
+                      'weight' : XSWeight+'*'+SFweight+'*'+METFilter_MC+'*(!(Gen_ZGstar_mass > 0 && Gen_ZGstar_MomId == 22 ))',
+                      'FilesPerJob' : 20 ,
 }
+
+############ VgS ############
 
 #FIXME Add normalization k-factor
 samples['VgS']  =  {  'name'   :   getSampleFiles(directory,'Wg_MADGRAPHMLM',False,'nanoLatino_')
@@ -302,6 +285,15 @@ samples['VZ'] = {    'name'   : getSampleFiles(directory,'ZZTo2L2Nu',False,'nano
                      'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
                      'FilesPerJob' : 20 ,
 }
+
+samples['WZ']  = {    'name':   getSampleFiles(directory,'WZTo3LNu', False,'nanoLatino_')
+                              # Should we include this as well here:
+                              # + getSampleFiles(directory,'tZq_ll')
+                              ,   
+                      'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC + '*1.11' ,  
+                      'FilesPerJob' : 4 ,
+                  }
+
 
 samples['VVV'] = {    'name'   : getSampleFiles(directory,'WWW',False,'nanoLatino_') 
                       + getSampleFiles(directory,'WWZ',False,'nanoLatino_') 
@@ -351,6 +343,7 @@ samples['qqH_hww']  = {  'name'   :   getSampleFiles(directory,'VBFHToWWTo2L2NuP
 samples['ggZH_hww']  = {  'name'   :   getSampleFiles(directory,'GluGluZH_HToWW_M125',False,'nanoLatino_'),
                         'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
 }
+
 
 ############ ttH ############
 

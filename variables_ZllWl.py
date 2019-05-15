@@ -101,14 +101,13 @@ variables['pt2']  = {   'name': 'Lepton_pt[1]',
                         'fold'  : 0                         
                         }
 
-variables['pt3']  = {   'name': 'std_vector_lepton_pt[2]',     
+variables['pt3']  = {   'name': 'Lepton_pt[2]',     
                         'range' : (20,10,100),   
                         'xaxis' : 'p_{T} 3rd lep',
                         'fold'  : 0                         
                         }
 
 #variables['njet']  = {   'name': 'njet',      
-#                        'range' : (4,0,4),  
-#                        'xaxis' : 'njet',   
+#                        'range' : (4,0,4),                          'xaxis' : 'njet',   
 #                         'fold' : 2
 #                        }
