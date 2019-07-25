@@ -16,6 +16,7 @@ variables['mll']  = {   'name': 'mll',            #   variable name
                          'fold' : 0
                        }
 
+<<<<<<< HEAD
 #variables['mll_low']  = {   'name': 'mll',            #   variable name    
 #                        'range' : (50,0,5),    #   variable range
 #                       'xaxis' : 'm_{ll} [GeV]',  #   x axis name
@@ -33,6 +34,25 @@ variables['mll']  = {   'name': 'mll',            #   variable name
 #                        'xaxis' : 'DR_{ll}',  #   x axis name
 #                         'fold' : 2
 #                        }
+=======
+variables['mll_low']  = {   'name': 'mll',            #   variable name    
+                        'range' : (50,0,5),    #   variable range
+                       'xaxis' : 'm_{ll} [GeV]',  #   x axis name
+                         'fold' : 0
+                       }
+
+variables['ptll']  = {   'name': 'ptll',            #   variable name    
+                        'range' : (20,0,150),    #   variable range
+                        'xaxis' : 'pt_{ll} [GeV]',  #   x axis name
+                        'fold' : 0
+                        }
+                        
+variables['drll']  = {   'name': 'drll',            #   variable name    
+                        'range' : (40,0,4),    #   variable range
+                        'xaxis' : 'DR_{ll}',  #   x axis name
+                         'fold' : 2
+                        }
+>>>>>>> 21d944cf413809518d21a1556f13ed6f4d669f18
 # from usage guid from https://indico.cern.ch/event/628846/  upto 10 arguments
 
 #variables['drllOneTwo'] = { 'name': 'dRLL(std_vector_lepton_eta[0],std_vector_lepton_eta[1],,std_vector_lepton_phi[0],std_vector_lepton_phi[1])',
@@ -44,6 +64,7 @@ variables['mll']  = {   'name': 'mll',            #   variable name
 #
 
 
+<<<<<<< HEAD
 #variables['mllWgSt']  = {   'name': 'mllWgSt',
 #                        'range' : (120,0,120),    #   variable range
 #                        'xaxis' : 'm_{ll} from Z/#gamma^{*} [GeV]',  #   x axis name
@@ -62,6 +83,26 @@ variables['mll']  = {   'name': 'mll',            #   variable name
 #                        'xaxis' : 'm_{ll} from #gamma^{*} [GeV]',  #   x axis name
 #                         'fold' : 0
 #                        }
+=======
+variables['mllWgSt']  = {   'name': 'mllWgSt',
+                        'range' : (120,0,120),    #   variable range
+                        'xaxis' : 'm_{ll} from Z/#gamma^{*} [GeV]',  #   x axis name
+                         'fold' : 0
+                        }
+
+
+variables['mllWgStLowM']  = {   'name': 'mllWgSt',
+                        'range' : (20,0,10),    #   variable range
+                        'xaxis' : 'm_{ll} from Z/#gamma^{*} [GeV]',  #   x axis name
+                         'fold' : 0
+                        }
+
+variables['mllWgStLLowM']  = {   'name': 'mllWgSt',
+                        'range' : (100,0,5),    #   variable range
+                        'xaxis' : 'm_{ll} from #gamma^{*} [GeV]',  #   x axis name
+                         'fold' : 0
+                        }
+>>>>>>> 21d944cf413809518d21a1556f13ed6f4d669f18
 #variables['mllmin3l']  = {   'name': 'mllmin3l',            #   variable name    
 #                        'range' : (120, 0,120),    #   variable range
 #                        'xaxis' : 'm_{ll} [GeV]',  #   x axis name
@@ -77,6 +118,7 @@ variables['mll']  = {   'name': 'mll',            #   variable name
 ##
 ##
 ##
+<<<<<<< HEAD
 #variables['MET_pt']  = {   'name': 'MET_pt',            #   variable name    
 #                        'range' : (20,0,150),    #   variable range
 #                        'xaxis' : 'pt [GeV]',  #   x axis name
@@ -106,6 +148,37 @@ variables['mll']  = {   'name': 'mll',            #   variable name
 #                        'xaxis' : 'p_{T} 3rd lep',
 #                        'fold'  : 0                         
 #                        }
+=======
+variables['MET_pt']  = {   'name': 'MET_pt',            #   variable name    
+                        'range' : (20,0,150),    #   variable range
+                        'xaxis' : 'pt [GeV]',  #   x axis name
+                        'fold' : 0
+                        }
+
+variables['mpmet']  = {   'name': 'mpmet',            #   variable name    
+                        'range' : (20,0,200),    #   variable range
+                        'xaxis' : 'mpmet [GeV]',  #   x axis name
+                         'fold' : 2
+                        }
+ 
+
+variables['pt1']  = {   'name': 'Lepton_pt[0]',     
+                        'range' : (20,10,100),   
+                        'xaxis' : 'p_{T} 1st lep',
+                        'fold'  : 0                         
+                        }
+variables['pt2']  = {   'name': 'Lepton_pt[1]',     
+                        'range' : (20,10,100),   
+                        'xaxis' : 'p_{T} 2nd lep',
+                        'fold'  : 0                         
+                        }
+
+variables['pt3']  = {   'name': 'Lepton_pt[2]',     
+                        'range' : (20,10,100),   
+                        'xaxis' : 'p_{T} 3rd lep',
+                        'fold'  : 0                         
+                        }
+>>>>>>> 21d944cf413809518d21a1556f13ed6f4d669f18
 
 #variables['njet']  = {   'name': 'njet',      
 #                        'range' : (4,0,4),                          'xaxis' : 'njet',   
