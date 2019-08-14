@@ -43,12 +43,12 @@ groupPlot['top']  = {
                   'samples'  : ['top']
               }
 
-#groupPlot['ggWW']  = {  
-#                  'nameHR' : 'WW',
-#                  'isSignal' : 0,
-#                  'color': 851, # kAzure -9 
-#                  'samples'  : ['ggWW']
-#}
+groupPlot['ggWW']  = {  
+                  'nameHR' : 'WW',
+                  'isSignal' : 0,
+                  'color': 851, # kAzure -9 
+                  'samples'  : ['ggWW']
+}
 
 
 
@@ -84,7 +84,7 @@ groupPlot['VZ']  = {
                   'nameHR' : "VZ",
                   'isSignal' : 0,
                   'color'    : 617,   # kViolet + 1  
-                  'samples'  : ['VZ', 'ZZ', 'ZZ']
+                  'samples'  : ['VZ', 'WZ']
 }
 
 
@@ -92,9 +92,23 @@ groupPlot['VgS']  = {
                   'nameHR' : "V#gamma*",
                   'isSignal' : 0,
                   'color'    : 409,   # kGreen - 9
-                  'samples'  : ['VgS', 'WZgS']
+                  'samples'  : ['VgS']
               }
 
+
+#groupPlot['WZgS_L']  = {  
+#                  'nameHR' : "WZmll01_L",
+#                  'isSignal' : 0,
+#                  'color'    : 600,   # kViolet + 1  
+#                  'samples'  : ['WZgS_L']
+#              }
+
+#groupPlot['WZgS_H']  = {  
+#                  'nameHR' : "WZmll01_H",
+#                  'isSignal' : 0,
+#                  'color'    : 887,   # kViolet + 1  
+#                  'samples'  : ['WZgS_H']
+#}
 
 #groupPlot['Higgs']  = {  
 #                  'nameHR' : 'Higgs',
@@ -117,12 +131,12 @@ groupPlot['VgS']  = {
                   
 #}
 
-#plot['ggWW']  = {
-#                  'color': 850, # kAzure -10
-#                  'isSignal' : 0,
-#                  'isData'   : 0,    
-#                  'scale'    : 1.0
-#}
+plot['ggWW']  = {
+                  'color': 850, # kAzure -10
+                  'isSignal' : 0,
+                  'isData'   : 0,    
+                  'scale'    : 1.0
+}
 
 plot['VZ']  = { 
                   'color': 858, # kAzure -2  
@@ -207,6 +221,13 @@ plot['VVV']  = {
                   'scale'    : 1.0
 }
 
+plot['WZ']  = { 
+                  'color': 887, # kAzure -2  
+                  'isSignal' : 0,
+                  'isData'   : 0,
+                  'scale'    : 1.0
+}
+
 #plot['H_htt'] = {
 #                  'nameHR' : 'Htt',
 #                  'color': 632+4, # kRed+4 
@@ -269,7 +290,19 @@ plot['VVV']  = {
 
 #              }
 
+#plot['WZgS_L']  = { 
+#                  'color': 890, # kAzure -2  
+#                  'isSignal' : 0,
+#                  'isData'   : 0,
+#                  'scale'    : 1.1
+#                  }
 
+#plot['WZgS_H']  = { 
+#                  'color': 887, # kAzure -2  
+#                  'isSignal' : 0,
+#                  'isData'   : 0,
+#                  'scale'    : 1.24
+#}
 #plot['Wg_MADGRAPHMLM'] = {
 #                  'nameHR' : 'Hww',
 #                  'color': 632, # kRed 
