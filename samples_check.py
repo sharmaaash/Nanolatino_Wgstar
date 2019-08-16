@@ -47,7 +47,7 @@ elif 'sdfarm' in SITE : # KISTI T3
 
 
 
-directory = treeBaseDir+'Fall2017_nAOD_v1_Full2017v2LP19/MCWgStar2017__MCWgStarCorr2017LP19'+skim
+directory = treeBaseDir+'Fall2017_nAOD_v1_Full2017v2LP19/MCWgStar2017__MCWgStarCorr2017LP19'+skim 
 
 
 ################################################
@@ -266,12 +266,15 @@ samples['Vg'] = {    'name'   :  getSampleFiles(directory,'Wg_MADGRAPHMLM',False
 ############ VgS ############
 
 #FIXME Add normalization k-factor
-samples['VgS']  =  {  'name'   : getSampleFiles(directory,'WZTo3LNu_mllmin01',False,'nanoLatino_'),
+samples['VgS']  =  {  'name'   :  getSampleFiles(directory,'WZTo3LNu_mllmin01',False,'nanoLatino_')
+                                + getSampleFiles(directory,'Zg',False,'nanoLatino_')
+                                + getSampleFiles(directory,'Wg_MADGRAPHMLM',False,'nanoLatino_'),
                       'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC,
                       'FilesPerJob' : 5 ,
                    }
+addSampleWeight(samples,'VgS','Wg_MADGRAPHMLM',    '(Gen_ZGstar_mass >0 && Gen_ZGstar_mass < 0.1)')
+addSampleWeight(samples,'VgS','Zg',                '(Gen_ZGstar_mass >0)')
 addSampleWeight(samples,'VgS','WZTo3LNu_mllmin01', '(Gen_ZGstar_mass>=0.1 || Gen_ZGstar_mass<0)')
-
 
 samples['VZ'] = {    'name'   : getSampleFiles(directory,'ZZTo2L2Nu',False,'nanoLatino_')
                      + getSampleFiles(directory,'WZTo2L2Q',False,'nanoLatino_')

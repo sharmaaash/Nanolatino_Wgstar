@@ -20,7 +20,7 @@ cuts['hww2l2v_13TeV_WgS_mmm_met']  = ' \
                 && abs(Lepton_pdgId[2]) == 13   \
                 && Lepton_pdgId[1]*Lepton_pdgId[2]<0   \
                 && mllTwoThree > 0 \
-                && (Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && (Lepton_isTightMuon_cut_Tight_HWWW[1]>0.5) && Lepton_isWgs[2]>0.5 \
+                && (Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 \
                 &&  fabs(mllTwoThree - 3.1) > 0.1 \
                 && MET_pt > 25 \
                 '
@@ -31,7 +31,7 @@ cuts['hww2l2v_13TeV_WgS_mee_met']  = ' \
                 && abs(Lepton_pdgId[2]) == 11   \
                 && Lepton_pdgId[1]*Lepton_pdgId[2]<0   \
                 && mllTwoThree > 0 \
-                && (Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5 || Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && (Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5 || Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && Lepton_isWgs[2]>0.5 \
+                && ( Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 \
                 &&  fabs(mllTwoThree - 3.1) > 0.1 \
                 && MET_pt > 25 \
                 '
@@ -42,7 +42,7 @@ cuts['hww2l2v_13TeV_WgS_emm_met']  = ' \
                 && abs(Lepton_pdgId[2]) == 13   \
                 && Lepton_pdgId[1]*Lepton_pdgId[2]<0   \
                 && mllTwoThree > 0 \
-                && (Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5 || Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && (Lepton_isTightElectron_mvaFall17Iso_WP90[1]>0.5 || Lepton_isTightMuon_cut_Tight_HWWW[1]>0.5) &&  Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 \
+                && (Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 \
                 &&  fabs(mllTwoThree - 3.1) > 0.1 \
                 && MET_pt > 25 \
                 '         
@@ -54,7 +54,7 @@ cuts['hww2l2v_13TeV_WgS_eee_met']  = ' \
                 && abs(Lepton_pdgId[2]) == 11   \
                 && Lepton_pdgId[1]*Lepton_pdgId[2]<0   \
                 && mllTwoThree > 0 \
-                && Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5 && Lepton_isTightElectron_mvaFall17Iso_WP90[1]>0.5 && Lepton_isWgs[2]>0.5 \
+                && Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5 && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 \
                 &&  fabs(mllTwoThree - 3.1) > 0.1 \
                 && MET_pt > 25 \
                 '
@@ -65,7 +65,7 @@ cuts['hww2l2v_13TeV_WgS_mmm_mpmet']  = ' \
                 && abs(Lepton_pdgId[2]) == 13   \
                 && Lepton_pdgId[1]*Lepton_pdgId[2]<0   \
                 && mllTwoThree > 0 \
-                && (Lepton_isTightMuon_cut_Tight_HWWW[1]>0.5) && (Lepton_isTightMuon_cut_Tight_HWWW[1]>0.5) && Lepton_isWgs[2]>0.5 \
+                && (Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 \
                 &&  fabs(mllTwoThree - 3.1) > 0.1 \
                 && mpmet > 25 \
                 '
@@ -76,7 +76,7 @@ cuts['hww2l2v_13TeV_WgS_mee_mpmet']  = ' \
                 && abs(Lepton_pdgId[2]) == 11   \
                 && Lepton_pdgId[1]*Lepton_pdgId[2]<0   \
                 && mllTwoThree > 0 \
-                && (Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5 || Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && (Lepton_isTightElectron_mvaFall17Iso_WP90[1]>0.5 || Lepton_isTightMuon_cut_Tight_HWWW[1]>0.5)  && Lepton_isWgs[2]>0.5 \
+                && ( Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 \
                 &&  fabs(mllTwoThree - 3.1) > 0.1 \
                 && mpmet > 25 \
                 '
@@ -87,7 +87,7 @@ cuts['hww2l2v_13TeV_WgS_emm_mpmet']  = ' \
                 && abs(Lepton_pdgId[2]) == 13   \
                 && Lepton_pdgId[1]*Lepton_pdgId[2]<0   \
                 && mllTwoThree > 0 \
-                && (Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5 || Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5) && (Lepton_isTightElectron_mvaFall17Iso_WP90[1]>0.5 || Lepton_isTightMuon_cut_Tight_HWWW[1]>0.5)  && Lepton_isWgs[2]>0.5 \
+                && (Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 \
                 &&  fabs(mllTwoThree - 3.1) > 0.1 \
                 && mpmet > 25 \
                ' 
@@ -99,7 +99,7 @@ cuts['hww2l2v_13TeV_WgS_eee_mpmet']  = ' \
                 && abs(Lepton_pdgId[2]) == 11   \
                 && Lepton_pdgId[1]*Lepton_pdgId[2]<0   \
                 && mllTwoThree > 0 \
-                && (Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5) && Lepton_isTightElectron_mvaFall17Iso_WP90[1]>0.5 && Lepton_isWgs[2]>0.5 \
+                && Lepton_isTightElectron_mvaFall17Iso_WP90[0]>0.5 && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 \
                 &&  fabs(mllTwoThree - 3.1) > 0.1 \
                 && mpmet > 25 \
                 '
