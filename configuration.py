@@ -34,7 +34,7 @@ variablesFile = 'variables_ZllWl.py'
 # file with list of cuts
 #cutsFile = 'cuts_WZsampleStudy.py' 
 #cutsFile = 'cutsDY.py' 
-cutsFile = 'cuts_ZllWl.py' 
+cutsFile = 'cut_wgs.py' 
 #cutsFile = 'cuts_mmm.py' 
 #cutsFile = 'cuts_emm.py' 
 #cutsFile = 'cuts.py' 

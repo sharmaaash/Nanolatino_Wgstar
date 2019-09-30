@@ -51,9 +51,19 @@ structure['ggWW']  = {
                   'isData'   : 0    
                   }
 
-structure['VgS'] = { 
+#structure['VgS'] = { 
+#                  'isSignal' : 0,
+#                  'isData'   : 0 
+#                  }
+
+structure['WZgS_H']  = {
                   'isSignal' : 0,
-                  'isData'   : 0 
+                  'isData'   : 0
+                  }
+
+structure['WZgS_L']  = {
+                  'isSignal' : 0,
+                  'isData'   : 0
                   }
 
 #structure['ggWW_Int']  = {
