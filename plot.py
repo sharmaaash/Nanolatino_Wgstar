@@ -88,27 +88,27 @@ groupPlot['VZ']  = {
 }
 
 
-#groupPlot['VgS']  = {
-#                  'nameHR' : "V#gamma*",
-#                  'isSignal' : 0,
-#                  'color'    : 409,   # kGreen - 9
-#                  'samples'  : ['VgS']
-#              }
-
-
-groupPlot['WZgS_L']  = {  
-                  'nameHR' : "WZmll01_L",
+groupPlot['VgS']  = {
+                  'nameHR' : "V#gamma*",
                   'isSignal' : 0,
-                  'color'    : 600,   # kViolet + 1  
-                  'samples'  : ['WZgS_L']
+                  'color'    : 409,   # kGreen - 9
+                  'samples'  : ['VgS']
               }
 
-groupPlot['WZgS_H']  = {  
-                  'nameHR' : "WZmll01_H",
-                  'isSignal' : 0,
-                  'color'    : 887,   # kViolet + 1  
-                  'samples'  : ['WZgS_H']
-}
+
+#groupPlot['WZgS_L']  = {  
+#                  'nameHR' : "WZmll01_L",
+#                  'isSignal' : 0,
+#                  'color'    : 600,   # kViolet + 1  
+#                  'samples'  : ['WZgS_L']
+#              }
+
+#groupPlot['WZgS_H']  = {  
+#                  'nameHR' : "WZmll01_H",
+#                  'isSignal' : 0,
+#                  'color'    : 887,   # kViolet + 1  
+#                  'samples'  : ['WZgS_H']
+#}
 
 #groupPlot['Higgs']  = {  
 #                  'nameHR' : 'Higgs',
@@ -145,12 +145,12 @@ plot['VZ']  = {
                   'scale'    : 1.0
 }
 
-#plot['VgS'] = { 
-#                  'color'    : 409,   # kViolet + 1  
-#                  'isSignal' : 0,
-#                  'isData'   : 0,
-#                  'scale'    : 1.0
-#}
+plot['VgS'] = { 
+                  'color'    : 409,   # kViolet + 1  
+                  'isSignal' : 0,
+                  'isData'   : 0,
+                  'scale'    : 1.0
+}
 
 #plot['Fake']  = {  
 #                  'color': 921,    # kGray + 1
@@ -290,19 +290,19 @@ plot['WZ']  = {
 
 #              }
 
-plot['WZgS_L']  = { 
-                  'color': 890, # kAzure -2  
-                  'isSignal' : 0,
-                  'isData'   : 0,
-                  'scale'    : 1.1
-                  }
+#plot['WZgS_L']  = { 
+#                  'color': 890, # kAzure -2  
+#                  'isSignal' : 0,
+#                  'isData'   : 0,
+#                  'scale'    : 1.0
+#                  }
 
-plot['WZgS_H']  = { 
-                  'color': 887, # kAzure -2  
-                  'isSignal' : 0,
-                  'isData'   : 0,
-                  'scale'    : 1.24
-}
+#plot['WZgS_H']  = { 
+#                  'color': 887, # kAzure -2  
+#                  'isSignal' : 0,
+#                  'isData'   : 0,
+#                  'scale'    : 1.0
+#}
 #plot['Wg_MADGRAPHMLM'] = {
 #                  'nameHR' : 'Hww',
 #                  'color': 632, # kRed 
