@@ -191,12 +191,10 @@ DataRun = [
           ]
 
 
-DataSets = ['MuonEG','SingleMuon','SingleElectron']
+DataSets = ['SingleElectron']
 
 DataTrig = {
-  'MuonEG'         : ' Trigger_ElMu' ,
-  'SingleMuon'     : '!Trigger_ElMu && Trigger_sngMu' ,
-  'SingleElectron' : '!Trigger_ElMu && !Trigger_sngMu && Trigger_sngEl',
+  'SingleElectron' : ' Trigger_sngEl',
 #  'DoubleMuon'     : '!Trigger_ElMu && !Trigger_sngMu && !Trigger_sngEl && Trigger_dblMu',
 #  'DoubleEG'       : '!Trigger_ElMu && !Trigger_sngMu && !Trigger_sngEl && !Trigger_dblMu && Trigger_dblEl'
 }
@@ -311,16 +309,16 @@ samples['Vg']  = {  'name'   :   getSampleFiles(directory,'Wg_MADGRAPHMLM',False
 ############ VgS ############
 samples['WZgS_L']  = { 'name':  getSampleFiles(directory,'WZTo3LNu_mllmin01', False),
 ##                              + getSampleFiles(directory,'Wg_AMCNLOFXFX', False),
-                       'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC +'*1.52'  ,  
+                       'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC +'*1.36'  ,  
                        'FilesPerJob' : 1 ,
                   }
 addSampleWeight(samples,'WZgS_L','WZTo3LNu_mllmin01',  'Gen_ZGstar_mass >0 && Gen_ZGstar_mass < 4')
 #addSampleWeight(samples,'WZgS_L','Wg_MADGRAPHMLM',  'Gen_ZGstar_mass >0 && Gen_ZGstar_mass < 0.1')
 ##addSampleWeight(samples,'WZgS_L','Wg_AMCNLOFXFX',  'Gen_ZGstar_mass >0 && Gen_ZGstar_mass < 0.1')
 
-## 1.52 Gen_level scaling
+## 1.36 Gen_level scaling
 samples['WZgS_H']  = { 'name':  getSampleFiles(directory,'WZTo3LNu_mllmin01', True) ,
-                       'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC+'*1.52'   ,  
+                       'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC+'*1.36'   ,  
                       'FilesPerJob' : 1 ,
 }
 
