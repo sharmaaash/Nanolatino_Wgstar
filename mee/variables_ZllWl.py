@@ -90,22 +90,29 @@ variables['mllTwoThreeLLowM']  = {   'name': 'mllTwoThree',
 #                        }
  
 
-#variables['pt1']  = {   'name': 'Lepton_pt[0]',     
-#                        'range' : (20,10,100),   
-#                        'xaxis' : 'p_{T} 1st lep',
-#                        'fold'  : 0                         
-#                        }
-#variables['pt2']  = {   'name': 'Lepton_pt[1]',     
-#                        'range' : (20,10,100),   
-#                        'xaxis' : 'p_{T} 2nd lep',
-#                        'fold'  : 0                         
-#                        }
+variables['pt1']  = {   'name': 'Lepton_pt[0]',     
+                        'range' : (20,10,100),   
+                        'xaxis' : 'p_{T} 1st lep',
+                        'fold'  : 0                         
+                        }
+variables['pt2']  = {   'name': 'Lepton_pt[1]',     
+                        'range' : (20,10,100),   
+                        'xaxis' : 'p_{T} 2nd lep',
+                        'fold'  : 0                         
+                        }
 
-#variables['pt3']  = {   'name': 'Lepton_pt[2]',     
-#                        'range' : (20,10,100),   
-#                        'xaxis' : 'p_{T} 3rd lep',
-#                        'fold'  : 0                         
-#                        }
+variables['pt3']  = {   'name': 'Lepton_pt[2]',     
+                        'range' : (20,10,100),   
+                        'xaxis' : 'p_{T} 3rd lep',
+                        'fold'  : 0                         
+                        }
+
+variables['pt4']  = {   'name': 'Lepton_pt[3]',     
+                        'range' : (20,10,100),   
+                        'xaxis' : 'p_{T} 3rd lep',
+                        'fold'  : 0                         
+                        }
+
 
 #variables['njet']  = {   'name': 'njet',      
 #                        'range' : (4,0,4),  
