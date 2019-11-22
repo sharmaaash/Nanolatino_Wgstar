@@ -5,7 +5,7 @@
 
 
 
-supercut = ' Lepton_pt[0] > 30 \
+supercut = ' Lepton_pt[0] > 40 && abs(mll - 3.1) > 0.1 \
               '
 
 #cuts['ZToeeWTom_mpmet_Zpeak']  = '  mpmet > 30  \
@@ -38,16 +38,18 @@ supercut = ' Lepton_pt[0] > 30 \
 #                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*13*13)) && (Lepton_pdgId[1] * Lepton_pdgId[2] < 0) && fabs(mllTwoThree - 91.2) < 10. && Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5 && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 '
 
 cuts['ZToeeWTom_puppiMET']  = ' PuppiMET_pt > 30\
-                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*11*11)) && (Lepton_pdgId[1] * Lepton_pdgId[2] < 0)  && (Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5 ) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 '
+                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*11*11)) && (Lepton_pdgId[1] * Lepton_pdgId[2] < 0)  && (Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5 ) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 && fabs(mllTwoThree - 3.1) > 0.1 '
 #cuts['ZTommWToe']  = '   Lepton_pt[0] > 30 && Lepton_pt[1] > 40 && Lepton_pt[2] > 40  \
 #                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 11*13*13)) && (Lepton_pdgId[1] * Lepton_pdgId[2] < 0)  && (Lepton_isTightElectron_mvaFall17V1Iso_WP90[0]>0.5) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 '
 cuts['ZToeeWTom_mpmet']  = ' mpmet > 30\
-                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*11*11)) && (Lepton_pdgId[1] * Lepton_pdgId[2] < 0)  && (Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5 ) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 '
+                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*11*11)) && (Lepton_pdgId[1] * Lepton_pdgId[2] < 0)  && (Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5 ) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 && fabs(mllTwoThree - 3.1) > 0.1 '
 #cuts['ZToeeWToe']  = '    Lepton_pt[0] > 30 && Lepton_pt[1] > 30 && Lepton_pt[2] > 30  \
 #                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 11*11*11)) && (Lepton_pdgId[1] * Lepton_pdgId[2] < 0)  && Lepton_isTightElectron_mvaFall17V1Iso_WP90[0]>0.5 && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 '
 #cuts['ZTommWTom']  = '   Lepton_pt[0] > 40 && Lepton_pt[1] > 40 && Lepton_pt[2] > 40  \
 #                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*13*13)) && (Lepton_pdgId[1] * Lepton_pdgId[2] < 0)  && Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5 && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 '
 cuts['ZToeeWTom_mtw']  = ' mtw1 > 30\
-                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*11*11)) && (Lepton_pdgId[1] * Lepton_pdgId[2] < 0)  && (Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5 ) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 '
+                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*11*11)) && (Lepton_pdgId[1] * Lepton_pdgId[2] < 0)  && (Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5 ) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 && fabs(mllTwoThree - 3.1) > 0.1 '
 
+cuts['ZToeeWTom_met']  = ' MET_pt > 30\
+                          && ((fabs(Lepton_pdgId[0] * Lepton_pdgId[1] * Lepton_pdgId[2])== 13*11*11)) && (Lepton_pdgId[1] * Lepton_pdgId[2] < 0)  && (Lepton_isTightMuon_cut_Tight_HWWW[0]>0.5 ) && Lepton_isWgs[1]>0.5 && Lepton_isWgs[2]>0.5 && fabs(mllTwoThree - 3.1) > 0.1  '
 

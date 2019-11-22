@@ -47,7 +47,7 @@ cutsFile = 'cut_peak.py'
 #samplesFile = 'samples_mmm.py' 
 #samplesFile = 'samples_emm.py' 
 #samplesFile = 'samples_test.py' 
-samplesFile = 'samples.py' 
+samplesFile = 'samples_emm.py' 
 
 #samplesFile = 'samples_test.py' 
 
