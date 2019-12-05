@@ -194,7 +194,7 @@ DataRun = [
 DataSets = ['SingleElectron']
 
 DataTrig = {
-  'SingleElectron' : ' Trigger_sngEl',
+  'SingleElectron' : 'Trigger_sngEl',
 #  'DoubleMuon'     : '!Trigger_ElMu && !Trigger_sngMu && !Trigger_sngEl && Trigger_dblMu',
 #  'DoubleEG'       : '!Trigger_ElMu && !Trigger_sngMu && !Trigger_sngEl && !Trigger_dblMu && Trigger_dblEl'
 }
@@ -251,13 +251,13 @@ ptllDYW_LO = '((0.632927+0.0456956*gen_ptll-0.00154485*gen_ptll*gen_ptll+2.64397
 
 samples['DY'] = {    'name'   :  getSampleFiles(directory,'DYJetsToLL_M-50-LO_ext1',False,'nanoLatino_')
                                + getSampleFiles(directory,'DYJetsToLL_M-5to50-LO',False,'nanoLatino_'),
-                     'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
+                     'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC+'*(Sum$(GenPart_pdgId == 22 && TMath::Odd(GenPart_statusFlags) && GenPart_pt > 20.) == 0)' ,
                      'FilesPerJob' : 5 ,
                        }
 
-cutSF = '(abs(Lepton_pdgId[0]*Lepton_pdgId[1]) == 11*11)||(abs(Lepton_pdgId[0]*Lepton_pdgId[1]) == 13*13)'
-addSampleWeight(samples,'DY','DYJetsToLL_M-50-LO_ext1',cutSF)
-addSampleWeight(samples,'DY','DYJetsToLL_M-5to50-LO',cutSF)
+#cutSF = '(abs(Lepton_pdgId[0]*Lepton_pdgId[1]) == 11*11)||(abs(Lepton_pdgId[0]*Lepton_pdgId[1]) == 13*13)'
+addSampleWeight(samples,'DY','DYJetsToLL_M-50-LO_ext1',ptllDYW_NLO)
+addSampleWeight(samples,'DY','DYJetsToLL_M-5to50-LO',ptllDYW_LO)
 
 samples['top'] = {    'name'   :   getSampleFiles(directory,'TTTo2L2Nu',False,'nanoLatino_')
                                  + getSampleFiles(directory,'ST_tW_antitop',False,'nanoLatino_')
@@ -268,6 +268,9 @@ samples['top'] = {    'name'   :   getSampleFiles(directory,'TTTo2L2Nu',False,'n
                      'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
                      'FilesPerJob' : 2 ,
 }
+Top_pTrw = '(TMath::Sqrt( TMath::Exp(0.0615-0.0005*topGenPt) * TMath::Exp(0.0615-0.0005*antitopGenPt) ) )'
+#addSampleWeight(samples,'top','TTTo2L2Nu',Top_pTrw)
+
 
 ############ WW ############
 
@@ -299,26 +302,27 @@ samples['top'] = {    'name'   :   getSampleFiles(directory,'TTTo2L2Nu',False,'n
 ############ Vg ############
 
 samples['Vg']  = {  'name'   :   getSampleFiles(directory,'Wg_MADGRAPHMLM',False,'nanoLatino_'),
-                    'weight' : XSWeight+'*'+SFweight+'*'+METFilter_MC+'*(Gen_ZGstar_mass <= 0)',
+                    'weight' : XSWeight+'*'+SFweight+'*'+METFilter_MC,
                     'FilesPerJob': 5,
                   }
-#addSampleWeight(samples,'Vg','Wg_MADGRAPHMLM',  'Gen_ZGstar_mass >0 && Gen_ZGstar_MomId == 22')
+addSampleWeight(samples,'Vg','Wg_MADGRAPHMLM',  '(Gen_ZGstar_mass >0 && Gen_ZGstar_MomId == 22)')
 #addSampleWeight(samples,'Vg','Wg_AMCNLOFXFX',  'Gen_ZGstar_mass >0 && Gen_ZGstar_MomId == 22')
 
 
 ############ VgS ############
-samples['WZgS_L']  = { 'name':  getSampleFiles(directory,'WZTo3LNu_mllmin01', False),
+samples['WZgS_L']  = { 'name':  getSampleFiles(directory,'WZTo3LNu_mllmin01', False,'nanoLatino_')
+                              + getSampleFiles(directory,'Wg_MADGRAPHMLM', False,'nanoLatino_'),
 ##                              + getSampleFiles(directory,'Wg_AMCNLOFXFX', False),
-                       'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC +'*0.53'  ,  
+                       'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC + '*0.53'  ,  
                        'FilesPerJob' : 1 ,
                   }
-addSampleWeight(samples,'WZgS_L','WZTo3LNu_mllmin01',  'Gen_ZGstar_mass >0 && Gen_ZGstar_mass < 4')
-#addSampleWeight(samples,'WZgS_L','Wg_MADGRAPHMLM',  'Gen_ZGstar_mass >0 && Gen_ZGstar_mass < 0.1')
+addSampleWeight(samples,'WZgS_L','WZTo3LNu_mllmin01',  '(Gen_ZGstar_mass >0.1 && Gen_ZGstar_mass < 4)')
+addSampleWeight(samples,'WZgS_L','Wg_MADGRAPHMLM',  '(Gen_ZGstar_mass >0 && Gen_ZGstar_mass < 0.1)')
 ##addSampleWeight(samples,'WZgS_L','Wg_AMCNLOFXFX',  'Gen_ZGstar_mass >0 && Gen_ZGstar_mass < 0.1')
 
-## 0.53 Gen_level scaling
-samples['WZgS_H']  = { 'name':  getSampleFiles(directory,'WZTo3LNu_mllmin01', True) ,
-                       'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC+'*0.53'   ,  
+## 1.30 Gen_level scaling
+samples['WZgS_H']  = { 'name':  getSampleFiles(directory,'WZTo3LNu_mllmin01', False,'nanoLatino_') ,
+                       'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC+'*0.53'  ,  
                       'FilesPerJob' : 1 ,
 }
 

@@ -294,7 +294,7 @@ plot['WZgS_L']  = {
                   'color': 890, # kAzure -2  
                   'isSignal' : 0,
                   'isData'   : 0,
-                  'scale'    : 1.4
+                  'scale'    : 1.3
                   }
 
 plot['WZgS_H']  = { 

@@ -4,35 +4,35 @@
     
 #'fold' : # 0 = not fold (default), 1 = fold underflowbin, 2 = fold overflow bin, 3 = fold underflow and overflow
    
-variables['events']  = {   'name': '1',      
-                        'range' : (1,0,2),  
-                        'xaxis' : 'events', 
-                         'fold' : 3
-                        }
+#variables['events']  = {   'name': '1',      
+#                        'range' : (1,0,2),  
+#                        'xaxis' : 'events', 
+#                         'fold' : 3
+#                        }
     
 variables['mll']  = {   'name': 'mll',            #   variable name    
                         'range' : (120,0,120),    #   variable range
                         'xaxis' : 'm_{ll} [GeV]',  #   x axis name
-                         'fold' : 0
+                         'fold' : 3
                        }
 
 variables['mll_low']  = {   'name': 'mll',            #   variable name    
                         'range' : (50,0,5),    #   variable range
                        'xaxis' : 'm_{ll} [GeV]',  #   x axis name
-                         'fold' : 0
+                         'fold' : 3
                        }
 
-variables['ptll']  = {   'name': 'ptll',            #   variable name    
-                        'range' : (20,0,150),    #   variable range
-                        'xaxis' : 'pt_{ll} [GeV]',  #   x axis name
-                        'fold' : 3
-                        }
+#variables['ptll']  = {   'name': 'ptll',            #   variable name    
+#                        'range' : (20,0,150),    #   variable range
+#                        'xaxis' : 'pt_{ll} [GeV]',  #   x axis name
+#                        'fold' : 3
+#                        }
                         
-variables['drll']  = {   'name': 'drll',            #   variable name    
-                        'range' : (40,0,4),    #   variable range
-                        'xaxis' : 'DR_{ll}',  #   x axis name
-                         'fold' : 3
-                        }
+#variables['drll']  = {   'name': 'drll',            #   variable name    
+#                        'range' : (40,0,4),    #   variable range
+#                        'xaxis' : 'DR_{ll}',  #   x axis name
+#                         'fold' : 3
+#                        }
 # from usage guid from https://indico.cern.ch/event/628846/  upto 10 arguments
 
 #variables['drllOneTwo'] = { 'name': 'dRLL(std_vector_lepton_eta[0],std_vector_lepton_eta[1],,std_vector_lepton_phi[0],std_vector_lepton_phi[1])',
@@ -47,25 +47,25 @@ variables['drll']  = {   'name': 'drll',            #   variable name
 variables['mllTwoThree']  = {   'name': 'mllTwoThree',
                         'range' : (80,0,120),    #   variable range
                         'xaxis' : 'm_{ll} from Z/#gamma^{*} [GeV]',  #   x axis name
-                         'fold' : 3
+                         'fold' : 0
                         }
 
 
 variables['mllTwoThreeLowM']  = {   'name': 'mllTwoThree',
                        'range' : (20,0,10),    #   variable range
                         'xaxis' : 'm_{ll} from Z/#gamma^{*} [GeV]',  #   x axis name
-                         'fold' : 3
+                         'fold' : 2
                         }
 
 variables['mllTwoThreeLLowM']  = {   'name': 'mllTwoThree',
                         'range' : (100,0,5),    #   variable range
                         'xaxis' : 'm_{ll} from #gamma^{*} [GeV]',  #   x axis name
-                         'fold' : 3
+                         'fold' : 2
                         }
 #variables['mllmin3l']  = {   'name': 'mllmin3l',            #   variable name    
 #                        'range' : (120, 0,120),    #   variable range
 #                        'xaxis' : 'm_{ll} [GeV]',  #   x axis name
-#                         'fold' : 0
+#                         'fold' : 3
 #                        }
 
 #variables['mllmin3lLLowM'] = {   'name': 'mllmin3l',            #   variable name
@@ -89,7 +89,12 @@ variables['mpmet']  = {   'name': 'mpmet',            #   variable name
                          'fold' : 3
                         }
  
-
+variables['Puppimet']  = {
+                        'name': 'PuppiMET_pt',
+                        'range' : (20,0,200),
+                        'xaxis' : 'puppimet [GeV]',
+                        'fold'  : 3
+}
 variables['pt1']  = {   'name': 'Lepton_pt[0]',     
                         'range' : (20,0,100),   
                         'xaxis' : 'p_{T} 1st lep',
@@ -111,8 +116,8 @@ variables['pt4']  = {   'name': 'Lepton_pt[3]',
                         'xaxis' : 'p_{T} 4th lep',
                         'fold'  : 3                         
                         }
-variables['njet']  = {   'name': 'njet',      
-                        'range' : (4,0,4),  
-                        'xaxis' : 'njet',   
-                         'fold' : 3
-                        }
+#variables['njet']  = {   'name': 'njet',      
+#                        'range' : (4,0,4),  
+#                        'xaxis' : 'njet',   
+#                         'fold' : 3
+#                        }

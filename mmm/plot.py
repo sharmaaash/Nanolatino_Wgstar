@@ -301,7 +301,7 @@ plot['WZgS_H']  = {
                   'color': 887, # kAzure -2  
                   'isSignal' : 0,
                   'isData'   : 0,
-                  'scale'    : 1.0 
+                  'scale'    : 3.24
 }
 #plot['Wg_MADGRAPHMLM'] = {
 #                  'nameHR' : 'Hww',

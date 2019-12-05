@@ -34,7 +34,7 @@ variablesFile = 'variables_ZllWl.py'
 # file with list of cuts
 #cutsFile = 'cuts_WZsampleStudy.py' 
 #cutsFile = 'cutsDY.py' 
-#cutsFile = 'cuts.py'
+#cutsFile = 'cut_low.py'
 cutsFile = 'cut_peak.py'
 #cutsFile = 'cuts_ZllWl.py' 
 #cutsFile = 'cuts_mmm.py' 
@@ -44,10 +44,10 @@ cutsFile = 'cut_peak.py'
 # file with list of samples
 #samplesFile = 'samples_fake.py' 
 #samplesFile = 'samples_WZsampleStudy.py' 
-#samplesFile = 'samples_mmm.py' 
+samplesFile = 'samples_mmm.py' 
 #samplesFile = 'samples_emm.py' 
 #samplesFile = 'samples_test.py' 
-samplesFile = 'samples_eem.py' 
+#samplesFile = 'samples_eee.py' 
 
 #samplesFile = 'samples_test.py' 
 

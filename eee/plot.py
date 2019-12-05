@@ -294,14 +294,14 @@ plot['WZgS_L']  = {
                   'color': 890, # kAzure -2  
                   'isSignal' : 0,
                   'isData'   : 0,
-                  'scale'    : 1.4
+                  'scale'    : 1.0	
                   }
 
 plot['WZgS_H']  = { 
                   'color': 887, # kAzure -2  
                   'isSignal' : 0,
                   'isData'   : 0,
-                  'scale'    : 1.0 
+                  'scale'    : 2.7 
 }
 #plot['Wg_MADGRAPHMLM'] = {
 #                  'nameHR' : 'Hww',
